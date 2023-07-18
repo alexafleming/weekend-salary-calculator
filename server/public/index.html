@@ -1,18 +1,30 @@
 <!doctype html>
 <html>
 
-<head></head>
+<head>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
 
 <body>
+    <div id="headerDiv">
+        <h1>Salary Caculator</h1>
+    </div>
+    <form id="employee infomation" autocomplete = "off" onsubmit="completedForms(event)">
+        <h3>Add Employee</h3>
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <input type="text" id="idNumber" placeholder="ID">
+        <input type="text" id="jobTitle" placeholder="Title">
+        <input type="text" id="annualSalary" placeholder="Annual Salary">
+
+
+        <input id="submitButton" type="submit" value="Submit">
+    </form>
 
 
 
-    <h1>TEST</h1>
 
 
-
-
-    <link rel="stylesheet" href="styles.css">
     <script src="scripts/client.js"></script>
 </body>
 <footer></footer>
