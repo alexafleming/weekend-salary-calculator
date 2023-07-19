@@ -7,7 +7,7 @@
 
 <body>
     <div id="headerDiv">
-        <h1>Salary Caculator</h1>
+        <h1>Salary Calculator</h1>
     </div>
     <form id="my-form" autocomplete = "off" onsubmit="completedForms(event)">
         <h3>Add Employee</h3>
@@ -15,12 +15,12 @@
         <input type="text" id="lastName" placeholder="Last Name">
         <input type="text" id="idNumber" placeholder="ID">
         <input type="text" id="jobTitle" placeholder="Title">
-        <input type="text" id="annualSalary" placeholder="Annual Salary">
+        <input type="number" id="annualSalary" placeholder="Annual Salary">
 
 
         <input id="submitButton" type="submit" value="Submit">
     </form>
-
+    <div class="table-section">
     <h3>Employees</h3>
     <table id="employees-information">
         <tr>
@@ -32,10 +32,8 @@
           <th></th>
         </tr>
       </table>
-
-
-
-
+      <h3 class="total-monthly">Total Monthly: $<span id="totalMonthlyCost"></span></h3>
+    </div>
     <script src="scripts/client.js"></script></script>
 </body>
 <footer></footer>

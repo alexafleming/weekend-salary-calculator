@@ -6,3 +6,37 @@
     padding: .05%;
     font-family: sans-serif;
 }
+	#employees-information {
+    padding-top: 5px;
+    width: 100%;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: rgb(209, 208, 208)
+    
+    }
+
+table, tr, th, td {
+    border: 2px solid #000000;
+    border-collapse: collapse;
+}
+
+#delete-button {
+    font-family: sans-serif;
+    color: #000000;
+    border: 0px solid;
+    padding: 5px;
+    margin: 5px;
+}
+
+th {
+    padding: 1%;
+    width: 100px; 
+}
+
+.total-monthly{
+    text-align: right;
+}
+
+.table-section{
+    width: 75%;
+}
