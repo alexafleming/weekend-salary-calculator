@@ -2,6 +2,7 @@ console.log("hi");
 
 let monthlyCosts = 0;
 let forms = [];
+let maxMonthlyCost = 20000;
 
 function completedForms(event) {
     event.preventDefault();
@@ -19,17 +20,31 @@ function completedForms(event) {
     let employeeInformation = document.getElementById('employees-information');
     let row = employeeInformation.insertRow(forms.length);
 
-    let row1 = row.insertCell(0);
-    let row2 = row.insertCell(1);
-    let row3 = row.insertCell(2);
-    let row4 = row.insertCell(3);
-    let row5 = row.insertCell(4);
-    let row6 = row.insertCell(5);
 
-    row1.innerHTML = firstName.value;
-    row2.innerHTML = lastName.value;
-    row3.innerHTML = idNumber.value;
-    row4.innerHTML = jobTitle.value;
-    row5.innerHTML = annualSalary.value;
-    row6.innerHTML = "delete";
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+    let cell4 = row.insertCell(3);
+    let cell5 = row.insertCell(4);
+    let cell6 = row.insertCell(5);
+
+    let deleteButton = document.createElement("button");
+    deleteButton.onclick = function () { deleteRow(row); };
+    deleteButton.textContent = 'delete';
+
+    cell1.innerHTML = firstName.value;
+    cell2.innerHTML = lastName.value;
+    cell3.innerHTML = idNumber.value;
+    cell4.innerHTML = jobTitle.value;
+    cell5.innerHTML = annualSalary.value;
+    cell6.appendChild(deleteButton);
+
+    monthlyCosts += parseInt(annualSalary.value);
+    console.log(monthlyCosts);
+  
+}
+
+function deleteRow(row) {
+    row.remove();
+
 }
