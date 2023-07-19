@@ -40,3 +40,8 @@ th {
 .table-section{
     width: 75%;
 }
+
+ tr:nth-child(even) {
+    background-color: #ffffff;
+    color: #000000;
+}
